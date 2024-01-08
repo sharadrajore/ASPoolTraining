@@ -14,9 +14,6 @@ public class Product {
 		System.out.println("public Product() ");
 	}
 
-	
-	
-	
 	public Product(int productId, String productName, double productCost) {
 		super();
 		this.productId = productId;
@@ -25,19 +22,9 @@ public class Product {
 		System.out.println("public Product(int productId, String productName, double productCost)");
 	}
 	
-	public Product(double productCost, String productName, int  productId) {
-		super();
-		this.productId = productId;
-		this.productName = productName;
-		this.productCost = productCost;
-		System.out.println("public Product(double productCost, String productName, int  productId)");
-	}
-	
-	
-	
-	/*public Product(String productId, String productName, String  productCost) {
+	public Product(String productId, String productName, String  productCost) {
 		System.out.println("public Product(String productId, String productName, String productCost)");
-	}*/
+	}
 
 	public int getProductId() {
 		return productId;

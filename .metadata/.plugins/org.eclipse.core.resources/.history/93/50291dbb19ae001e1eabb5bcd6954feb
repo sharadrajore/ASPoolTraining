@@ -5,12 +5,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
    <bean id="p1"  class="com.zensar.spring_core.beans.Product">
-	  
-	   <property name="productId">
+	   <!--<property name="productId" value="123"></property> -->   <!-- setProductId -->
+	  <!-- <property name="productId">
 		   <value>111</value>
 	   </property>
-	    <property name="productName" value="HDD"></property>   
-	    <property name="productCost" value="5000"></property>   
+	    <property name="productName" value="HDD"></property>   setProductName 
+	    <property name="productCost" value="5000"></property>   setProductCost -->
 	    
 	   <!-- <constructor-arg>
 			<value>222</value>

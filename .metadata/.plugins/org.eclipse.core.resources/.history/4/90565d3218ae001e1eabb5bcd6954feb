@@ -14,9 +14,6 @@ public class Product {
 		System.out.println("public Product() ");
 	}
 
-	
-	
-	
 	public Product(int productId, String productName, double productCost) {
 		super();
 		this.productId = productId;
@@ -32,8 +29,6 @@ public class Product {
 		this.productCost = productCost;
 		System.out.println("public Product(double productCost, String productName, int  productId)");
 	}
-	
-	
 	
 	/*public Product(String productId, String productName, String  productCost) {
 		System.out.println("public Product(String productId, String productName, String productCost)");
