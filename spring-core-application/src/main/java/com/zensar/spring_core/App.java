@@ -1,11 +1,8 @@
 package com.zensar.spring_core;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
-
-import com.zensar.spring_core.beans.Product;
+import org.springframework.core.io.FileSystemResource;
 
 
 public class App 
@@ -21,13 +18,54 @@ public class App
     	ApplicationContext context=new FileSystemXmlApplicationContext("./src/main/resources/context.xml");// metadata
     	
     	
-    	Product bean1 = context.getBean("p1",Product.class);
+    	//Employee employee = context.getBean("employee",Employee.class);
+
+    	//Address address = context.getBean("address",Address.class);
+    	
+    	//System.out.println(employee.getAddress().hashCode());
     	
     	
-    	System.out.println(bean1);
+    	//Employee employee2 = context.getBean("employee",Employee.class);
+
+    	//Address address = context.getBean("address",Address.class);
     	
-    	((AbstractApplicationContext) context).close();
+    	//System.out.println(employee2.getAddress().hashCode());
     	
+    	
+    	
+    	
+    	//System.out.println(address);
+    	
+    //	((AbstractApplicationContext) context).close();
+    	
+    	
+    	
+    	
+		/*
+		 * ApplicationContext context2=new
+		 * FileSystemXmlApplicationContext("./src/main/resources/context.xml");
+		 * 
+		 * Employee employee3 = context2.getBean("employee",Employee.class);
+		 * 
+		 * //Address address = context.getBean("address",Address.class);
+		 * 
+		 * System.out.println(employee3.getAddress().hashCode());
+		 * 
+		 * 
+		 * Employee employee4 = context2.getBean("employee",Employee.class);
+		 * 
+		 * //Address address = context.getBean("address",Address.class);
+		 * 
+		 * System.out.println(employee4.getAddress().hashCode());
+		 */
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	//beanFactory.getBean("employee");
     	
     
     	
