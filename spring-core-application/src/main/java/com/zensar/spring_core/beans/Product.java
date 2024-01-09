@@ -71,6 +71,16 @@ public class Product {
 	}
 	
 	
+	public void myMethod() {
+		System.out.println("I am inside myMethod ");
+	}
+	
+	
+	public void myDestroy() {
+		System.out.println("I am inside myDestroy ");
+	}
+	
+	
 	
 
 }
