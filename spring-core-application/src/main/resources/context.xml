@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--	<bean id="p1" class="com.zensar.spring_core.beans.Product" lazy-init="false"
+	<!--<context:annotation-config></context:annotation-config>-->
+	
+	
+	<!--<bean id="p1" class="com.zensar.spring_core.beans.Product" p:productId="111" p:productName="test" p:productCost="2000">
+		
+	</bean>-->
+	
+	<!--<bean id="p1" class="com.zensar.spring_core.beans.Product" c:productId="123" c:productName="HDD"  c:productCost="5000">
+		
+	</bean>-->
+	
+	<bean id="addr" class="com.zensar.spring_core.beans.Address" c:state="test" c:city="test" c:pinCode="111" >
+		
+	</bean>
+
+	<!--	<bean id="p1" class="com.zensar.spring_core.beans.Product"
+	lazy-init="false"
 		init-method="myMethod" destroy-method="myDestroy">
 
 		<property name="productId">
@@ -28,20 +45,32 @@
 
 	</bean>
 -->
-	<bean id="addr1" class="com.zensar.spring_core.beans.Address" autowire="default" scope="prototype">
+	<!--<bean id="addr2" class="com.zensar.spring_core.beans.Address"
+		autowire="default" scope="prototype">
 		<property name="state" value="Maha"></property>
 		<property name="city" value="Pune"></property>
 		<property name="pinCode" value="444016"></property>
 	</bean>
-	
+
+	<bean id="addr1" class="com.zensar.spring_core.beans.Address"
+		autowire="default" scope="prototype">
+		<property name="state" value="MP"></property>
+		<property name="city" value="Indore"></property>
+		<property name="pinCode" value="222222"></property>
+	</bean>
 
 
-	<bean id="employee" class="com.zensar.spring_core.beans.Employee"  autowire="byType" >
+	<bean id="employee" class="com.zensar.spring_core.beans.Employee">
 		<property name="employeeId" value="1001"></property>
 		<property name="employeeName" value="Ram"></property>
 		<property name="employeeAge" value="24"></property>
-		<!--<property name="address" ref="address"></property>-->
-	</bean>
+		<property name="address">
+			<map>
+				<entry key="1" value-ref="addr1"> </entry>
+				<entry key-ref="addr1" value=""></entry>
+			</map>
+		</property>
+	</bean>-->
 
 
 </beans>
