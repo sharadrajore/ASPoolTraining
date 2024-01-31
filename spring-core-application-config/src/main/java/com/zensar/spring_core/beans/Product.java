@@ -1,17 +1,24 @@
 package com.zensar.spring_core.beans;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("myproduct")
 public class Product {
 	
+	@Value("${productId}")
 	private int productId;
 	
+	@Value("${productName}")
 	private String productName;
 	
+	@Value("${productCost}")
 	private double productCost;
 	
 
-	/*
-	 * public Product() { super(); System.out.println("public Product() "); }
-	 */
+	
+	 public Product() { super(); System.out.println("public Product() "); }
+	 
 	
 	
 	
